@@ -1,0 +1,14 @@
+version: '3'
+services:
+  server:
+    build: server_master_branch
+    image: server
+    container_name: server
+    ports:
+      - "8080:8080"
+  serversoap:
+    build: soap_server
+    image: serversoap
+    container_name: serversoap
+    ports:
+      - "8081:8080"
